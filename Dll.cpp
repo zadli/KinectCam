@@ -4,20 +4,6 @@
 //  We do not use the inbuilt BaseClasses routines as we need to register as
 //  a capture source
 //////////////////////////////////////////////////////////////////////////
-#pragma comment(lib, "kernel32")
-#pragma comment(lib, "user32")
-#pragma comment(lib, "gdi32")
-#pragma comment(lib, "advapi32")
-#pragma comment(lib, "winmm")
-#pragma comment(lib, "ole32")
-#pragma comment(lib, "oleaut32")
-
-#ifdef _DEBUG
-    #pragma comment(lib, "strmbasd")
-#else
-    #pragma comment(lib, "strmbase")
-#endif
-
 
 #include <streams.h>
 #include <olectl.h>
