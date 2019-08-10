@@ -16,6 +16,8 @@ set(KinectCam_SOURCES
     Dll.cpp
     KinectCam.cpp
     VCam.cpp
+
+	KinectCam.def # Module definition for exports
 )
 
 set(KinectCam_EXTRA
