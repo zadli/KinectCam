@@ -1,6 +1,9 @@
-#include "KinectCam.h"
-#include "stdio.h"
+#include <windows.h>
+#include <io.h>
+#include <stdio.h>
 #include <shlobj.h>
+
+#include "KinectCam.h"
 
 bool g_flipImage = false;
 
