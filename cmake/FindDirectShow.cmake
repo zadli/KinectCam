@@ -29,7 +29,7 @@ find_package(WindowsSDK ${_ds_quiet})
 find_package(DirectX ${_ds_quiet})
 
 set(DIRECTSHOW_WINDOWSSDK_ROOT
-	"${DIRECTSHOW_WINDOWSSDK_ROOT}"
+	"${WINDOWSSDK_LATEST_DIR}"
 	CACHE
 	PATH
 	"A specific Windows SDK to use for DirectShow.")
@@ -55,17 +55,19 @@ find_path(DIRECTSHOW_BASECLASS_DIR
 	NAMES
 	streams.h
 	HINTS
-	"${DIRECTSHOW_WINDOWSSDK_ROOT}"
+	${DIRECTSHOW_WINDOWSSDK_ROOT}
 	PATHS
 	${_acceptable_winsdk}
 	PATH_SUFFIXES
 	"Samples/Multimedia/DirectShow/BaseClasses")
 
+get_windowssdk_include_dirs(${WINDOWSSDK_LATEST_DIR} sdkincdir)
 find_path(DIRECTSHOW_WINDOWSSDK_INCLUDE_DIR
 	NAMES
 	DShow.h
 	HINTS
-	"${DIRECTSHOW_WINDOWSSDK_ROOT}"
+	${DIRECTSHOW_WINDOWSSDK_ROOT}
+	${sdkincdir}
 	PATHS
 	${_acceptable_winsdk}
 	PATH_SUFFIXES
