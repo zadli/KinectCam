@@ -25,7 +25,7 @@ jobs:
         cd ${{ github.workspace }}
         git clone --depth 1 --no-checkout https://github.com/microsoft/Windows-classic-samples.git directshow
         cd directshow
-        git checkout master -- Samples/Win7Samples/multimedia/directshow/baseclasses/
+        git checkout main -- Samples/Win7Samples/multimedia/directshow/baseclasses/
     - name: Install Kinect SDKs
       shell: powershell
       run: |
